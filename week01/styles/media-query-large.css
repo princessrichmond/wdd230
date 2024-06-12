@@ -1,0 +1,5 @@
+@media screen and (min-width: 500px) {
+    header{background-color: black;
+    color:white}
+    main{display: 1fr 1fr;}
+}
