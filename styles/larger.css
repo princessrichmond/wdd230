@@ -2,9 +2,7 @@
     .grid-container{
         grid-template-columns: 2fr 1fr;
     }
-    /* nav{
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    } */
+    
     nav ul{
         display: flex;
     }
@@ -12,16 +10,5 @@
         flex: 1 1 100%;
         
     }
-    /* .parent{
-        display: grid;
-        grid-template-columns: 2fr 1 fr;
-        column-gap: 10px;
-    }
-    .parent section{
-        box-shadow: 1px 1px 10px black;
-    } */
-    /* .grid-container{
-        display: inline-grid;
-    }  */
     
 }
