@@ -10,5 +10,10 @@
         flex: 1 1 100%;
         
     }
-    
+    /* nav ul {
+        display: flex;
+    } */
+    .hamburger {
+        display: none;
+    }
 }

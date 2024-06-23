@@ -1,35 +1,7 @@
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
-}
-header, footer, nav{
-    background-color: white;
-}
-
-.parent{
-    margin: 1rem 2vw;
-}
-.parent section{
-    border: 1px solid rgb(8, 8, 109);
-    background-color: white;
-    border-radius: 10px;
-    overflow:hidden;
-    margin: 1rem 0;
-}
-.parent span{
-    background-color: rgb(188, 188, 255);
-    color: #fff;
-    display: block;
-    text-align: center;
-    padding: .75rem 0;
-}
-.parent p{
-    padding: 10px;
-} */
 body{
     max-width: 100%;
     margin: auto;
+    background-color: white;
 }
 header{
     color: white;
@@ -160,15 +132,42 @@ footer{
 
 
 
-/* @media(min-width: 640px){
-    nav ul{
-        display: flex;
-        
-    }
-    nav ul li{
-        flex: 1 1 100%;
-    }
-    /* .grid-container{
-        display: block;
-    }  */
-/* } */ 
+/* Hide the menu by default on smaller screens */
+nav ul {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+nav.active ul {
+    display: block;
+    background-color: rgb(78, 76, 76);
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+header, nav, main, footer {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header.dark-mode, nav.dark-mode, main.dark-mode, footer.dark-mode {
+    background-color: #1e1e1e;
+}
+
+button.darkmode {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
