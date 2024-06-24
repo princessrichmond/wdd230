@@ -1,4 +1,4 @@
-@media (min-width: 1024px){
+@media (min-width: 768px){
     .grid-container{
         grid-template-columns: 2fr 1fr;
     }
@@ -10,10 +10,13 @@
         flex: 1 1 100%;
         
     }
-    /* nav ul {
-        display: flex;
-    } */
+   
     .hamburger {
-        display: none;
+        display: none !important;
     }
+    
+    .close {
+        display: none !important;
+    }
+    
 }
