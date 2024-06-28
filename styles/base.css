@@ -4,7 +4,7 @@ body{
     background-color: white;
 }
 header{
-    color: white;
+    color: white; 
     background-color: rgb(24, 24, 107);
     display: flex;
     align-items: center;
@@ -17,6 +17,9 @@ header img{
     border-radius: 100%;
     object-fit: cover;
     
+}
+.hero img{
+    width: 100%;
 }
 span{
     font-size: 40px;
