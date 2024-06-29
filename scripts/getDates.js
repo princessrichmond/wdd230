@@ -25,3 +25,19 @@ document.getElementById('close').addEventListener('click', function () {
     document.getElementById('close').style.display = 'none';
     document.getElementById('hamburger').style.display = 'block';
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const temperature = 75;
+    document.getElementById('temperature').textContent = temperature;
+});
+
+const visitsDisplay = document.querySelector(".visits");
+let numVisits = Number(window.localStorage.getItem("numVisits-ls")) || 0;
+if (numVisits !== 0) {
+	visitsDisplay.textContent = numVisits;
+} else {
+	visitsDisplay.textContent = `This is your first visit. 🥳 Welcome!`;
+}
+numVisits++;
+localStorage.setItem("numVisits-ls", numVisits);
+

@@ -18,9 +18,7 @@ header img{
     object-fit: cover;
     
 }
-.hero img{
-    width: 100%;
-}
+
 span{
     font-size: 40px;
     padding: 20px;
@@ -183,4 +181,55 @@ button.hamburger, button.close {
 }
 .close{
     display: none;
+}
+
+/* Hero Image */
+.hero{
+    position: relative;
+}
+.hero img{
+    width: 100%;
+    height: auto;
+    display: block;
+    animation: fade 5s;
+}
+.hero span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 1rem;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+iframe{
+    width: 97%;
+    height: 300px;
+    margin: 0 auto;
+    animation: fade 5s;
+    padding: 20px;
+}
+
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* visits */
+.label {
+	font-size: 16px;
+}
+
+.visits {
+	font-size: 16px;
+}
+#temperature{
+	font-size: 16px;
 }

@@ -1,0 +1,16 @@
+@media (max-width: 768px) {
+    .navbar a {
+        display: none;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar.active a {
+        display: block;
+        width: 100%;
+    }
+    .hamburger {
+        display: flex;
+    }
+}

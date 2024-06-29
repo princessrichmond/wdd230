@@ -19,8 +19,10 @@
 </head> 
 <body>
     <header>
-        <img src="images/profile.jpg" alt="Princess Richmond Profile" width="150" height="150">
-        <span>Princess Richmond</span>
+        <!-- <img src="images/profile.jpg" alt="Princess Richmond Profile" width="150" height="150"> -->
+            <source srcset="images/small-profile.webp" media="(max-width: 50)" >
+            <img src="images/profile.webp" loading="lazy" alt="Princess Richmond Profile" width="150" height="150">
+            <span>Princess Richmond</span>
         <!-- <img class="darkmode">&#x1F317;</button> -->
         <button class="darkmode" id="darkmode-toggle">&#x1F317;</button>
         <button class="hamburger" id="hamburger">&#9776;</button>
@@ -36,14 +38,17 @@
     </nav>
 
     <main>
-        <h1>WDD 230: Web Frontend Development</h1>
-        <div class="grid-container">
         <div class="hero">
             <picture>
-                <source srcset="images/manila_philippines_temple_lds.webp" media="(max-width: 960px)" >
-               <img src="images/manila_philippines_temple_lds.webp" alt="Nauvoo Illinois Temple" width="960" height="500">
+                <source srcset="images/small-nauvoo-temple.webp" media="(max-width: 400px)" >
+                <source srcset="images/large-nauvoo-temple.webp" media="(max-width: 960px)" >
+               <img src="images/large-nauvoo-temple.webp" loading="lazy" alt="Nauvoo Illinois Temple" width="1300" height="600">
+                <span>Nauvoo Illinois Temple</span>
             </picture>
         </div>
+        <h1>WDD 230: Web Frontend Development</h1>
+        <div class="grid-container">
+        
         <section class="card">
             <h2>Learning Activities</h2>
              <ul>
@@ -66,14 +71,18 @@
             <h2>Information</h2>
             <ul>
                 <li>Noblesville, Indiana</li>
-                <li>Temperature:</li>
-                <li>Page Visits:</li>
+                <li>Temperature: <span id="temperature"></span>°F</li>
+                <li><span class="label">Page Visits: </span><span class="visits"></span></li>
             </ul>
             </div>
         </section>
     </div>
 
     </main>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2789.4594543021644!2d-86.07101152203269!3d40.094056378783456
+    !2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8814ba9418879bef%3A0xdd6bee05839c19ae!2s563%20Lions%20Creek%20Dr%2C%20
+    Noblesville%2C%20IN%2046062!5e0!3m2!1sen!2sus!4v1719696712942!5m2!1sen!2sus" width="600" height="450" style="border:0;" 
+    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <footer>
         <p id="copyright">&copy; 2024 | Princess Richmond | United States of America</p>
         <p id="lastModified">Last Modification: </p>
