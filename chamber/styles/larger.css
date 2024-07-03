@@ -7,7 +7,7 @@
         align-items: flex-start;
     }
     .navbar.active a {
-        display: block;
+        display: block; 
         width: 100%;
     }
     .hamburger {

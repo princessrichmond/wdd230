@@ -169,7 +169,7 @@ button.hamburger, button.close {
     background: none;
     border: none;
     font-size: 30px;
-    cursor: pointer;
+    cursor: pointer; 
 }
 
 .hamburger {

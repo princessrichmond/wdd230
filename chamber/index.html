@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,10 +17,96 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon-16x16.png">
 </head>
-<body>
-    <header></header>
-    <nav></nav>
-    <main></main>
-    <footer></footer>
+<body> 
+    <header>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- <img src="images/AERIAL-PHOTO-TOWN-SQUARE-NOBLESVILLE-INDIANA-1.jpg" alt="skyview digital media" > -->
+        <span>Noblesville Chamber of Commerce</span>
+    </header>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <!-- <a href="#about">About</a>
+        <a href="#contact">Contact</a> -->
+        <a href="discover.html">Discover</a>
+        <a href="#directory">Directory</a>
+        <a href="#join">Join</a>
+    </div>
+
+    <main class="main">
+        <div class="hero">
+            <h1>Welcome to Noblesville Chamber of Commerce</h1>
+            <picture>
+                <source srcset="images/nv-small.webp" media="(max-width: 400px)" >
+                <source srcset="images/nv-medium.webp" media="(max-width: 960px)" >
+               <img src="images/nv-large.webp" loading="lazy" alt="Noblesville" width="1300" height="500">
+                <span>Nauvoo Illinois Temple</span>
+            </picture>
+        </div>
+
+        <!-- Call to Action Section -->
+        <div class="call-to-action">
+            <a href="/join">Join the Noblesville Chamber of Commerce</a>
+        </div>
+
+        <!-- Current Events Section -->
+        <div class="current-events">
+            <h2>Current Events</h2>
+            <ul>
+                <li>Event 1: Community Picnic - July 10, 2024</li>
+                <li>Event 2: Business Expo - August 5, 2024</li>
+                <li>Event 3: Networking Night - September 12, 2024</li>
+            </ul>
+        </div>
+
+        <!-- Weather Card Section -->
+        <div class="weather-card">
+            <h2>Current Weather</h2>
+            <p>Placeholder for weather data</p>
+            <p>Temperature: 75°F</p>
+            <p>Condition: Sunny</p>
+        </div>
+
+        <!-- Company Spotlights Section -->
+        <div class="company-spotlights">
+            <h2>Company Spotlights</h2>
+            <div class="spotlight">
+                <img src="company1-placeholder.jpg" alt="Company 1">
+                <div>
+                    <h3>Company 1</h3>
+                    <p>Description of Company 1. This company specializes in...</p>
+                </div>
+            </div>
+            <div class="spotlight">
+                <img src="company2-placeholder.jpg" alt="Company 2">
+                <div>
+                    <h3>Company 2</h3>
+                    <p>Description of Company 2. This company is known for...</p>
+                </div>
+            </div>
+            <div class="spotlight">
+                <img src="company3-placeholder.jpg" alt="Company 3">
+                <div>
+                    <h3>Company 3</h3>
+                    <p>Description of Company 3. They offer services in...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Contact Information:</p>
+        <p>Address: 123 Commerce St, Noblesville, IN 46060</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Email: info@noblesvillechamberofcommerce.com</p>
+        <p>Developed by Princess Richmond for WDD 230</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+    
+
+    <script src="scripts/chamber.js"></script>
 </body>
 </html>
