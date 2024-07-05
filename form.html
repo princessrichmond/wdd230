@@ -12,6 +12,7 @@
     <meta property="og:url" content="">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/form.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
@@ -32,57 +33,56 @@
     </header>
     <nav id="nav">
         <ul>
-            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="chamber/index.html">Chamber</a></li>
             <li><a href="week01/chamber-site-plan.html">Site Plan</a></li>
-            <li><a href="form.html">Form</a></li>
+            <li class="active"><a href="form.html">Form</a></li>
         </ul>
     </nav>
 
     <main>
-        <div class="hero">
-            <picture>
-                <source srcset="images/small-nauvoo-temple.webp" media="(max-width: 400px)" >
-                <source srcset="images/large-nauvoo-temple.webp" media="(max-width: 960px)" >
-               <img src="images/large-nauvoo-temple.webp" loading="lazy" alt="Nauvoo Illinois Temple" width="1300" height="600">
-            </picture>
-            <span>Nauvoo Illinois Temple</span>
-        </div>
-        <h1>WDD 230: Web Frontend Development</h1>
-        <div class="grid-container">
+       <div class="form-container">
+        <h1>Create User Account</h1>
+        <form method="get" action="record.html" class="wf1">
+            <fieldset>
+                <legend>Account Information</legend>
+                <label for="username">Username: </label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password: </label>
+                <input type="password" id="password" name="password" required pattern="^[a-zA-Z0-9]{8,}$">
         
-        <section class="card">
-            <h2>Learning Activities</h2>
-             <ul>
-                <li>Week 01: <a href="week01/mediaquery.html" class="link">Media Query</a></li>
-                <li>Week 02: <a></a></li>
-                <li>Week 03: 
-                    <a href="week03/images/pexels-pixabay-158316.webp">WebP |</a>
-                    <a href="week03/lazyload.html">Lazyload |</a>
-                    <a href="week03/responsive-images.html">Responsive Image |</a>
-                </li>
-                <li>Week 04: CodePen: 
-                    <a href="https://codepen.io/princessrichmond">@princessrichmond | </a>
-                    <a href="week04/images/Combinators Screenshot.png">CSS Combinators Exercises Screenshot | </a>
-                    <a href="week04/tablebuild.html">HTML TableS for Data Presentation</a>
-                </li>
-                <li>Week 05: <a></a></li>
-                <li>Week 06: <a></a></li>
-             </ul>
-        </section>
-
-
-        <section class="card">
-            <div class="content">
-            <h2>Information</h2>
-            <ul>
-                <li>Noblesville, Indiana</li>
-                <li>Temperature: <span id="temperature"></span>°F</li>
-                <li><span class="label">Page Visits: </span><span class="visits"></span></li>
-            </ul>
-            </div>
-        </section>
-    </div>
+                <label for="confirmPassword">Confirm Password: </label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <span id="errorMessage" class="error"></span>
+                
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Please enter a valid email address">
+                <span id="emailError" class="error"></span>
+   
+            </fieldset>
+            <fieldset>
+                <label for="rating">Page Rating: </label>
+                <!-- <label for="r">INPUT: range, min, max, datalist, required</label> -->
+                <div id="rangevalue"></div>
+                <input type="range" id="r" name="r" min="1" max="10" value="1" step="1" list="rangevalues">
+                <datalist id="rangevalues">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </datalist>
+                <p>Selected value: <span id="selectedValue">1</span></p>
+            </fieldset>
+            <button type="submit" class="button">Create User Account</button>
+        </form>
+       </div>
 
     </main>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2789.4594543021644!2d-86.07101152203269!3d40.094056378783456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8814ba9418879bef%3A0xdd6bee05839c19ae!2s563%20Lions%20Creek%20Dr%2C%20Noblesville%2C%20IN%2046062!5e0!3m2!1sen!2sus!4v1719696712942!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -91,5 +91,6 @@
         <p id="lastModified">Last Modification: </p>
     </footer>
     <script src="scripts/getDates.js"></script>
+    <script src="scripts/formvalidation.js"></script>
 </body>
 </html>

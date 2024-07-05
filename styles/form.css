@@ -1,0 +1,135 @@
+:root {
+    --primary-color: #007bff; /* Primary color for buttons and links */
+    --error-color: red; /* Error message color */
+    --box-shadow-color: #0077B6; /* Box shadow color */
+    --max-width-content: 800px; /* Maximum width for main content */
+    --background-color: #fff; /* Background color for main content */
+}
+/* Main content styles */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 30px #0077B6;;
+}
+
+
+form {
+    margin-bottom: 20px;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="range"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    font-size: 0.9rem;
+}
+.form-container {
+    margin-bottom: 20px;
+    /* text-align: center; */
+}
+.form-container a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.form-container a:hover {
+    background-color: #0056b3;
+}
+.record-form-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#r {
+    width: 180px;
+    margin-bottom: 10px;
+}
+
+#rangevalues {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 200px;
+}
+
+#rangevalues option {
+    flex: 1;
+}
+
+
+
+/* Submit button */
+.button {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
