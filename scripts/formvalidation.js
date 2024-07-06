@@ -1,3 +1,16 @@
+// Range value display
+const rangevalue = document.getElementById("rangevalue");
+const range = document.getElementById("r");
+
+// RANGE event listener
+range.addEventListener('change', displayRatingValue);
+range.addEventListener('input', displayRatingValue);
+
+function displayRatingValue() {
+    rangevalue.innerHTML = range.value;
+}
+
+// Form validation
 document.getElementById('passwordForm').addEventListener('submit', function(event) {
     event.preventDefault(); 
 
@@ -40,15 +53,3 @@ document.getElementById('passwordForm').addEventListener('submit', function(even
         this.submit();
     }
 });
-
-const rangevalue = document.getElementById("rangevalue");
-const range = document.getElementById("r");
-
-// Add event listeners for change and input events on the range input
-// range.addEventListener('change', displayRatingValue);
-range.addEventListener('input', displayRatingValue);
-
-function displayRatingValue() {
-    // rangevalue.innerHTML = range.value;
-    rangevalue.textContent = range.value;
-}

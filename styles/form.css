@@ -11,7 +11,7 @@ main {
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0 0 30px #0077B6;;
+    box-shadow: 0 0 30px #0077B6;
 }
 
 
@@ -97,23 +97,31 @@ input[type="submit"]:hover {
     margin-bottom: 20px;
     text-align: center;
 }
+.PR{
+    font-weight: bold;
+}
 
+/* Page Rating */
 #r {
-    width: 180px;
-    margin-bottom: 10px;
+	width: 500px;
+	margin-bottom: 0;
+}
+
+#rangevalue {
+	font-size: 2rem;
+	color: navy;
 }
 
 #rangevalues {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    max-width: 200px;
+	display: flex;
+	width: 500px;
+    padding: 10px;
 }
 
 #rangevalues option {
-    flex: 1;
+	flex: 1 1 auto;
+    padding: 0 12px;
 }
-
 
 
 /* Submit button */

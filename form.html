@@ -62,9 +62,9 @@
    
             </fieldset>
             <fieldset>
-                <label for="r">Page Rating: </label>
+                <label for="r" class="PR">Your Page Rating: </label>
                 <!-- <label for="r">INPUT: range, min, max, datalist, required</label> -->
-                <div id="rangevalue"></div>
+                <div id="rangevalue">1</div>
                 <input type="range" id="r" name="r" min="1" max="10" value="1" step="1" list="rangevalues">
                 <datalist id="rangevalues">
                     <option value="1">1</option>
@@ -78,7 +78,6 @@
                     <option value="9">9</option>
                     <option value="10">10</option>
                 </datalist>
-                <p>Selected value: <span id="selectedValue">1</span></p>
             </fieldset>
             <button type="submit" class="button">Create User Account</button>
         </form>
