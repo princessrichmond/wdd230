@@ -128,9 +128,10 @@ footer{
     background-color: rgb(123, 123, 197);
 
 }
-.content{
+/* .content{
     text-align: center;
-}
+    
+} */
 
 
 nav ul {
@@ -224,6 +225,46 @@ iframe{
 #temperature{
 	font-size: 16px;
 }
+
+
+
+/* weather */
+figure {
+    margin: auto;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+#weather-icon {
+    width: 40px; 
+    height: 40px; 
+    margin-right: 0px;
+}
+
+#current-temp {
+    font-size: 18px; 
+    margin: 0; 
+    padding: 0;
+}
+
+figcaption {
+    margin-left: 10px;
+    text-transform: capitalize;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center; 
+    height: 100%; 
+}
+
+
+
+
+
+
 
 @keyframes fade{
     0%{

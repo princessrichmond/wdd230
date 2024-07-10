@@ -54,8 +54,17 @@
         <section class="card">
             <h2>Learning Activities</h2>
              <ul>
-                <li>Week 01: <a href="week01/mediaquery.html" class="link">Media Query</a></li>
-                <li>Week 02: <a></a></li>
+                <li>Week 01: 
+                    <a href="week01/holygrail.html" class="link">HG Layout |</a>
+                    <a href="week01/mediaquery.html" class="link">Media Query</a>
+                    <!-- <a></a> -->
+
+                </li>
+                <li>Week 02: 
+                    <a href="week02/design.html">Design |</a>
+                    <!-- <a></a> -->
+                    <a href="week02/bom.html">Book of Mormon </a>
+                </li>
                 <li>Week 03: 
                     <a href="week03/images/pexels-pixabay-158316.webp">WebP |</a>
                     <a href="week03/lazyload.html">Lazyload |</a>
@@ -84,8 +93,14 @@
             <h2>Information</h2>
             <ul>
                 <li>Noblesville, Indiana</li>
-                <li>Temperature: <span id="temperature"></span>°F</li>
-                <li><span class="label">Page Visits: </span><span class="visits"></span></li>
+                <!-- <li>Temperature: <span id="temperature"></span>°F</li> -->
+                <li><figure>
+                    <img id="weather-icon" src="" alt="">
+                    <span id="current-temp"></span>
+                    <p>&nbsp; - </p>
+                    <figcaption></figcaption>
+                </figure></li>
+                <li><span class="label">Visit Count: </span><span class="visits"></span></li>
             </ul>
             </div>
         </section>
@@ -98,5 +113,6 @@
         <p id="lastModified">Last Modification: </p>
     </footer>
     <script src="scripts/getDates.js"></script>
+    <script src="scripts/getWeather.js"></script>
 </body>
 </html>

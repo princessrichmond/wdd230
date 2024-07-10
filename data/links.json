@@ -1,0 +1,85 @@
+{
+    "weeks": [
+        {
+            "week": "Week 1",
+            "links": [
+                {
+                    "url": "week01/holygrail.html",
+                    "title": "HG Layout"
+                },
+                {
+                    "url": "week01/mediaquery.html",
+                    "title": "Media Query"
+                }
+            ]
+        },
+        {
+            "week": "Week 2",
+            "links": [
+                {
+                    "url": "week02/design.html",
+                    "title": "Design"
+                },
+                {
+                    "url": "week02/bom.html",
+                    "title": "Book of Mormon"
+                }
+            ]
+        },
+        {
+            "week": "Week 3",
+            "links": [
+                {
+                    "url": "week03/images/pexels-pixabay-158316.webp",
+                    "title": "WebP"
+                },
+                {
+                    "url": "week03/lazyload.html",
+                    "title": "Lazyload"
+                },
+                {
+                    "url": "week03/responsive-images.html",
+                    "title": "Responsive Image"
+                }
+            ]
+        },
+        {
+            "week": "Week 4",
+            "links": [
+                {
+                    "url": "https://codepen.io/princessrichmond/pen/oNRKKOv",
+                    "title": "Pseudo-class Fun"
+                },
+                {
+                    "url": "week04/images/Combinators Screenshot.png",
+                    "title": "CSS Combinators Exercises Screenshot"
+                },
+                {
+                    "url": "week04/tablebuild.html",
+                    "title": "HTML TableS for Data Presentation"
+                }
+            ]
+        },
+        {
+            "week": "Week 5",
+            "links": [
+                {
+                    "url": "https://codepen.io/princessrichmond/pen/zYVxPOX",
+                    "title": "CSS Psuedo Elements"
+                },
+                {
+                    "url": "week05/new-ward-members.json",
+                    "title": "JSON New Ward Members"
+                },
+                {
+                    "url": "week05/prophets.html",
+                    "title": "Prophets"
+                },
+                {
+                    "url": "week05/weather.html",
+                    "title": "Consuming a Weather API"
+                }
+            ]
+        }
+    ]
+}
