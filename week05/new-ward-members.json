@@ -1,0 +1,53 @@
+[
+    {
+      "familyName": "Richmond",
+      "moveInDate": "2023-01-01",
+      "numberOfPeople": 4,
+      "visitedByBishopric": true,
+      "familyMembers": [
+        {
+          "name": "Edward Richmond",
+          "gender": "Male",
+          "birthdate": "1991-05-06"
+        },
+        {
+          "name": "Princess Richmond",
+          "gender": "Female",
+          "birthdate": "1998-01-24"
+        },
+        {
+          "name": "Nes Richmond",
+          "gender": "Male",
+          "birthdate": "2010-03-18"
+        },
+        {
+          "name": "Danie Richmond",
+          "gender": "Female",
+          "birthdate": "2015-09-02"
+        }
+      ]
+    },
+    {
+      "familyName": "Angell",
+      "moveInDate": "2023-06-06",
+      "numberOfPeople": 3,
+      "visitedByBishopric": false,
+      "familyMembers": [
+        {
+          "name": "Mann Angell",
+          "gender": "Male",
+          "birthdate": "1996-04-30"
+        },
+        {
+          "name": "Larah Angell",
+          "gender": "Female",
+          "birthdate": "1997-12-12"
+        },
+        {
+          "name": "Olivia Angell",
+          "gender": "Female",
+          "birthdate": "2017-08-05"
+        }
+      ]
+    }
+  ]
