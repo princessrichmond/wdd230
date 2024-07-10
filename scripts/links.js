@@ -4,8 +4,8 @@ const linksURL = "https://github.com/princessrichmond/wdd230/data/links.json";
 async function getLinks() {
     const response = await fetch(linksURL);
     const data = await response.json();
-    // console.log(data);
-    displayLinks(data.weeks);
+    console.log(data);
+    displayLinks(data);
   }
 
 function displayLinks(weeks) {
