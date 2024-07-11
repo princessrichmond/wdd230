@@ -26,16 +26,15 @@ async function apiFetch() {
   // Function to display weather data on the HTML page
   function displayResults(data) {
     // Display current temperature
-    currentTemp.innerHTML = `${Math.round(data.main.temp)}&deg;F`;
-    // currentTemp.innerHTML = `${data.main.temp}&deg;F`;
+    currentTemp.textContent = `${Math.round(data.main.temp)}°F`;
 
     const iconCode = data.weather[0].icon;
-
     const iconsrc = `https://openweathermap.org/img/w/${iconCode}.png`;
-    let desc = data.weather[0].description;
+
+    // let desc = data.weather[0].description;
     weatherIcon.setAttribute('src', iconsrc);
     weatherIcon.setAttribute('alt', data.weather[0].description);
-    captionDesc.textContent = desc;
+    captionDesc.textContent = data.weather[0].description;
   }
   apiFetch();
 
