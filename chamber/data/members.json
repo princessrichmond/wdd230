@@ -1,0 +1,68 @@
+{
+    "members": [
+      {
+        "name": "Costco of Noblesville",
+        "address": "14774 N Pointe Blvd, Noblesville, IN 46060",
+        "phone": "(463) 238-2013",
+        "website": "http://www.costco.com",
+        "image": "costco.png",
+        "membership_level": "Gold",
+        "other_info": "Costco Wholesale Corporation operates a chain of membership-only warehouse clubs."
+      },
+      {
+        "name": "Crew Carwash",
+        "address": "11700 Exit 5 Parkway Fishers IN 46037",
+        "phone": "(317) 572-2422",
+        "website": "https://crewcarwash.com",
+        "image": "crewcar.png",
+        "membership_level": "Silver",
+        "other_info": "Crew Carwash provides fast and reliable car cleaning services with a focus on quality and customer satisfaction"
+      },
+      {
+        "name": "Chick-fil-A",
+        "address": "16685 Mercantile Blvd. Noblesville IN 46060",
+        "phone": "(317) 773-4100",
+        "website": "https://www.cfasaxony.com",
+        "image": "chickfilA.png",
+        "membership_level": "Bronze",
+        "other_info": "Chick-fil-A serves delicious chicken sandwiches and sides with exceptional customer service."
+      },
+      {
+        "name": "Chuy's Tex-Mex Restaurant",
+        "address": "14150 Town Center Blvd. Noblesville IN 46060",
+        "phone": "(512) 473-8684",
+        "website": "https://www.chuys.com",
+        "image": "chuys.png",
+        "membership_level": "Gold",
+        "other_info": "Chuy's Tex-Mex Restaurant offers a vibrant dining experience with a diverse menu of Tex-Mex favorites and signature margaritas."
+      },
+      {
+        "name": "Wal-Mart",
+        "address": "16865 Clover Road Noblesville IN 46060",
+        "phone": "(317) 773-2903",
+        "website": "https://www.walmart.com",
+        "image": "walmart.jpg",
+        "membership_level": "Silver",
+        "other_info": "Walmart is a global retailer known for offering a wide range of products at competitive prices through its extensive network of stores and online platform."
+      },
+      {
+        "name": "Tropical Smoothie Cafe",
+        "address": "11170 E 146th Street Suite 104 Noblesville IN 46060",
+        "phone": "(317) 910-2779",
+        "website": "https://www.tropicalsmoothiecafe.com",
+        "image": "tropical.png",
+        "membership_level": "Bronze",
+        "other_info": "Tropical Smoothie Cafe specializes in refreshing smoothies and nutritious food options in a casual, beach-themed environment."
+      },
+      {
+        "name": "Bru Burger Bar",
+        "address": "350 Westfield Rd Suite 100 Noblesville IN 46060",
+        "phone": "(317) 764-2510",
+        "website": "https://www.bruburgerbar.com",
+        "image": "bruburger.png",
+        "membership_level": "Gold",
+        "other_info": "Bru Burger Bar features gourmet burgers crafted with quality ingredients, complemented by a selection of craft beers and appetizers."
+      }
+    ]
+  }
+  

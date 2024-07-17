@@ -98,7 +98,7 @@ lastModifiedElement.textContent = document.lastModified;
 
 
 
-//join
+//Join Page
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('.wf1'); // Select the form by its class name
 
@@ -203,3 +203,60 @@ document.addEventListener('DOMContentLoaded', function() {
         return /^[0-9]{10}$/.test(mobile);
     }
 });
+
+//Directory Page
+document.addEventListener('DOMContentLoaded', function() {
+    const gridButton = document.getElementById('grid');
+    const listButton = document.getElementById('list');
+    const memberList = document.getElementById('memberList');
+    const lastModifiedElement = document.getElementById('lastModified');
+
+    // Fetch members from JSON file
+    fetch('data/members.json')
+        .then(response => response.json())
+        .then(data => {
+            // Initialize member directory
+            renderMembers(data.members);
+
+            // Event listener for grid button
+            gridButton.addEventListener('click', function() {
+                memberList.classList.remove('list');
+                memberList.classList.add('grid');
+            });
+
+            // Event listener for list button
+            listButton.addEventListener('click', function() {
+                memberList.classList.remove('grid');
+                memberList.classList.add('list');
+            });
+        })
+        .catch(error => console.error('Error fetching members:', error));
+
+    // Function to render members
+    function renderMembers(members) {
+        memberList.innerHTML = ''; // Clear previous content
+
+        members.forEach(member => {
+            const memberCard = document.createElement('section');
+            memberCard.classList.add('member-card');
+
+            memberCard.innerHTML = `
+                <img src="images/${member.image}" alt="${member.name}" />
+                <h3>${member.name}</h3>
+                <p>${member.address}</p>
+                <p>${member.phone}</p>
+                <a href="${member.website}" target="_blank">${member.website}</a>
+                <p>Membership Level: ${member.membership_level}</p>
+                <p>${member.other_info}</p>
+            `;
+
+            memberList.appendChild(memberCard);
+        });
+        if (lastModifiedElement) {
+            lastModifiedElement.textContent = new Date().toLocaleDateString();
+        } else {
+            console.error('Element with id "lastModified" not found.');
+        }
+    }
+});
+
