@@ -1,4 +1,3 @@
-// select HTML elements in the document
 const weatherIcon = document.querySelector('#weather-icon');
 const currentTemp = document.querySelector('#current-temp');
 const captionDesc = document.querySelector('figcaption');

@@ -18,8 +18,46 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('close').style.display = 'none';
         document.getElementById('hamburger').style.display = 'block';
     });
-});
 
+    // weather card chamber index
+    const weatherIcon = document.querySelector('#weather-icon');
+    const currentTemp = document.querySelector('#current-temp');
+    const captionDesc = document.querySelector('figcaption');
+    const url = 'https://api.openweathermap.org/data/2.5/weather?lat=40.05&lon=-86.00&units=imperial&appid=7e5dfb1d77e3e16bc5cd6b1fa8804995';
+
+
+    async function apiFetch() {
+    
+        try {
+        const response = await fetch(url);
+        if (response.ok) {
+            const data = await response.json();
+            displayResults(data); 
+        } else {
+            throw Error(await response.text());
+        }
+        } catch (error) {
+        console.log('Fetch Error:', error);
+        }
+    }
+    
+    // Function to display weather data on the HTML page
+    function displayResults(data) {
+        // Display current temperature
+        currentTemp.textContent = `${Math.round(data.main.temp)}°F`;
+
+        const iconCode = data.weather[0].icon;
+        const iconsrc = `https://openweathermap.org/img/w/${iconCode}.png`;
+
+        // let desc = data.weather[0].description;
+        weatherIcon.setAttribute('src', iconsrc);
+        weatherIcon.setAttribute('alt', data.weather[0].description);
+        captionDesc.textContent = data.weather[0].description;
+    }
+    apiFetch();
+        const lastModifiedElement = document.getElementById('lastModified');
+        lastModifiedElement.textContent = document.lastModified;
+    });
 
 // Discover Page
 document.addEventListener("DOMContentLoaded", function() {
@@ -48,9 +86,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// // today's date
-// const theDateToday = new Date();
-// todayElement.textContent = today;
 
 document.addEventListener("DOMContentLoaded", function() {
 // Function to format the visit message
@@ -96,19 +131,59 @@ const lastModifiedElement = document.getElementById("lastModified");
 lastModifiedElement.textContent = document.lastModified;
 });
 
+//visitor message
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to calculate the difference in days between two dates
+    function getDaysDifference(date1, date2) {
+        const diffTime = Math.abs(date2 - date1);
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        return diffDays;
+    }
+
+    // Function to display visitor message based on last visit
+    function displayVisitorMessage() {
+        const localStorageKey = 'lastVisitDate';
+        const lastVisitDateString = localStorage.getItem(localStorageKey);
+        const currentVisitDate = new Date();
+
+        if (lastVisitDateString) {
+            const lastVisitDate = new Date(lastVisitDateString);
+            const daysDifference = getDaysDifference(lastVisitDate, currentVisitDate);
+
+            let message;
+            if (daysDifference < 1) {
+                message = "Back so soon! Awesome!";
+            } else {
+                message = `You last visited ${daysDifference} day${daysDifference === 1 ? '' : 's'} ago.`;
+            }
+
+            document.getElementById('visitorMessage').textContent = message;
+        } else {
+            localStorage.setItem(localStorageKey, currentVisitDate.toISOString());
+            document.getElementById('visitorMessage').textContent = "Welcome! Let us know if you have any questions.";
+        }
+    }
+
+    // Call the function to display visitor message
+    displayVisitorMessage();
+
+    // Update localStorage with current visit date
+    localStorage.setItem('lastVisitDate', new Date().toISOString());
+});
+
 
 
 //Join Page
 document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('.wf1'); // Select the form by its class name
+    const form = document.querySelector('.wf1');
 
     if (form) {
         form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the form from submitting normally
+            event.preventDefault();
 
             // Validate form fields
             if (validateForm()) {
-                this.submit(); // Submit the form if validation passes
+                form.submit(); // Submit the form if validation passes
             }
         });
     }
@@ -116,7 +191,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function validateForm() {
         let isValid = true;
 
-        // Reset error messages
         clearErrors();
 
         // Form field values
@@ -234,7 +308,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to render members
     function renderMembers(members) {
-        memberList.innerHTML = ''; // Clear previous content
+        memberList.innerHTML = ''; 
 
         members.forEach(member => {
             const memberCard = document.createElement('section');
